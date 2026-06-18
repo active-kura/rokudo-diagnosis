@@ -1,9 +1,4 @@
 {
   "name": "rokudo-diagnosis",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "npx serve .",
-    "build": "echo 'static site, no build needed'",
-    "start": "npx serve ."
-  }
+  "version": "1.0.0"
 }
