@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>往生要集 六道診断</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+
+    <section class="hero card">
+      <p class="eyebrow">往生要集 勉強会ワーク</p>
+      <h1>六道診断</h1>
+      <p class="subtitle">今、あなたの心はどの世界に住していますか？</p>
+      <p class="heroDesc">
+        この診断は、仏教の六道を「今の心の傾向」として見つめるためのものです。<br>
+        結果は固定された性格ではありません。今の自分を静かに観察する入口としてお使いください。
+      </p>
+      <a class="btn-primary" href="#quiz">診断をはじめる ▼</a>
+    </section>
+
+    <section class="card how-to">
+      <h2>回答方法</h2>
+      <p>各質問について、<strong>今の自分に近いもの</strong>を選んでください。</p>
+      <ul class="scale-list">
+        <li><span class="scale-num">5</span>とてもあてはまる</li>
+        <li><span class="scale-num">4</span>あてはまる</li>
+        <li><span class="scale-num">3</span>どちらともいえない</li>
+        <li><span class="scale-num">2</span>あまりあてはまらない</li>
+        <li><span class="scale-num">1</span>まったくあてはまらない</li>
+      </ul>
+    </section>
+
+    <section id="quiz" class="card">
+      <h2>診断項目</h2>
+      <form id="quizForm" novalidate>
+        <div id="questions"></div>
+        <p id="error" class="error" role="alert" aria-live="assertive"></p>
+        <button type="submit" class="btn-primary" id="submitBtn">診断結果を見る</button>
+      </form>
+    </section>
+
+    <section id="result" class="result card" aria-live="polite" aria-hidden="true">
+      <h2>診断結果</h2>
+      <p class="resultLead">点数が高い世界ほど、今の心がそこに住している傾向を表します。</p>
+
+      <div id="mainResult" class="mainResult"></div>
+
+      <div id="scoreList" class="scoreList"></div>
+
+      <div class="reflection" id="reflection">
+        <h3 id="resultTitle"></h3>
+        <p id="resultDesc"></p>
+        <p class="questionLabel">🪷 内省の問い</p>
+        <p id="resultQuestion" class="deepQuestion"></p>
+      </div>
+
+      <button id="retry" type="button" class="btn-secondary">もう一度診断する</button>
+    </section>
+
+    <footer>
+      <p>この診断は勉強会用の自己観察ワークです。</p>
+    </footer>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

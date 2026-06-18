@@ -1,0 +1,405 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: linear-gradient(170deg, #fbf7ef 0%, #f0e6d4 60%, #e8d9c0 100%);
+  min-height: 100vh;
+  color: #2f2922;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Meiryo", sans-serif;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* ===== Layout ===== */
+.container {
+  width: min(840px, 100%);
+  margin: 0 auto;
+  padding: 20px 16px 64px;
+}
+
+/* ===== Card ===== */
+.card {
+  background: rgba(255, 253, 247, 0.97);
+  border: 1px solid #e0cca8;
+  border-radius: 20px;
+  padding: 28px 24px;
+  margin: 20px 0;
+  box-shadow: 0 6px 28px rgba(80, 55, 20, 0.09);
+}
+
+/* ===== Hero ===== */
+.hero {
+  text-align: center;
+  padding: 40px 24px 36px;
+  background: linear-gradient(145deg, #fffcf5 0%, #fdf3e0 100%);
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 5px 16px;
+  border-radius: 999px;
+  background: #efe0c4;
+  color: #6c4a22;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  color: #4a3015;
+  font-size: clamp(2.2rem, 9vw, 3.8rem);
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #604222;
+  margin: 12px 0 16px;
+}
+
+.heroDesc {
+  color: #5a4a38;
+  margin: 0 0 28px;
+  font-size: 0.97rem;
+  line-height: 1.9;
+}
+
+/* ===== How-to ===== */
+.how-to h2 { margin-bottom: 12px; }
+
+.scale-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.scale-list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f8f0e2;
+  border: 1px solid #e0cca8;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.88rem;
+}
+
+.scale-num {
+  font-weight: 900;
+  color: #8f6330;
+  font-size: 1rem;
+}
+
+/* ===== Headings ===== */
+h2 {
+  margin: 0 0 16px;
+  color: #5a3a18;
+  font-size: 1.3rem;
+  border-left: 5px solid #b68c4b;
+  padding-left: 12px;
+  line-height: 1.4;
+}
+
+h3 { color: #5a3a18; margin: 0 0 10px; font-size: 1.1rem; }
+
+/* ===== Buttons ===== */
+.btn-primary {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #a0722a 0%, #7a5120 100%);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.05rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(100, 60, 10, 0.22);
+  transition: transform 0.15s, box-shadow 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.4;
+}
+
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(100, 60, 10, 0.28); }
+.btn-primary:active { transform: translateY(1px); box-shadow: 0 2px 8px rgba(100, 60, 10, 0.18); }
+
+.btn-secondary {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 20px auto 0;
+  padding: 14px 20px;
+  border: 2px solid #8a7060;
+  border-radius: 999px;
+  background: transparent;
+  color: #5a4438;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-secondary:hover { background: #f0e4d0; }
+.btn-secondary:active { transform: translateY(1px); }
+
+/* ===== Questions ===== */
+.question {
+  background: #fff;
+  border: 1px solid #eadac1;
+  border-radius: 16px;
+  padding: 18px 16px;
+  margin: 14px 0;
+  transition: box-shadow 0.2s;
+}
+
+.question.answered {
+  border-color: #c4a06a;
+  background: #fffbf4;
+}
+
+.qNum {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #9a7040;
+  margin-bottom: 4px;
+  letter-spacing: 0.04em;
+}
+
+.qText {
+  margin: 0 0 14px;
+  font-weight: 700;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #2f2922;
+}
+
+.choices {
+  display: grid;
+  gap: 8px;
+}
+
+.choice {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 1.5px solid #dac7a8;
+  border-radius: 12px;
+  background: #fdf8f2;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.12s, border-color 0.12s;
+  user-select: none;
+}
+
+.choice:hover { background: #f4e8d4; border-color: #b89060; }
+
+.choice input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  accent-color: #8f6330;
+  cursor: pointer;
+}
+
+.choice span {
+  font-size: 0.93rem;
+  line-height: 1.4;
+}
+
+.choice:has(input:checked) {
+  background: #efe0c4;
+  border-color: #9c6c2e;
+}
+
+.choice:has(input:checked) span { font-weight: 800; }
+
+/* ===== Progress ===== */
+.progress-wrap {
+  margin: 20px 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #7a6248;
+}
+
+.progress-bar-bg {
+  flex: 1;
+  height: 8px;
+  background: #e8d8be;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #b68c4b, #8f6330);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+  width: 0%;
+}
+
+/* ===== Error ===== */
+.error {
+  display: none;
+  color: #8f241f;
+  background: #fff0ed;
+  border: 1.5px solid #e3aaa1;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 700;
+  margin: 12px 0;
+  font-size: 0.93rem;
+}
+
+/* ===== Submit area ===== */
+.submit-area {
+  margin-top: 24px;
+  text-align: center;
+}
+
+/* ===== Result ===== */
+.result { display: none; }
+.result.visible { display: block; }
+
+.resultLead { color: #695b4b; font-size: 0.93rem; margin-bottom: 16px; }
+
+.mainResult {
+  text-align: center;
+  color: #4a3015;
+  font-weight: 900;
+  font-size: clamp(1.1rem, 4vw, 1.4rem);
+  line-height: 1.5;
+  padding: 18px 12px;
+  background: linear-gradient(135deg, #fdf3e0, #f5e4c4);
+  border-radius: 14px;
+  border: 1.5px solid #d4b07a;
+  margin-bottom: 20px;
+}
+
+.mainResult .top-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #8a6530;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* ===== Score Bars ===== */
+.scoreList { margin: 4px 0 20px; }
+
+.scoreRow {
+  display: grid;
+  grid-template-columns: 80px 1fr 52px;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.scoreName { font-weight: 800; font-size: 0.9rem; color: #4a3015; }
+.scoreNum { font-weight: 900; font-size: 0.9rem; text-align: right; color: #7a5020; }
+
+.barWrap {
+  height: 20px;
+  border-radius: 999px;
+  background: #ecdcc4;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #d4a850, #8f6330);
+  width: 0%;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.bar.top { background: linear-gradient(90deg, #e8b840, #b06820); }
+
+/* ===== Reflection ===== */
+.reflection {
+  padding: 20px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #fdf6ea, #f5e8d0);
+  border: 1px solid #dfc898;
+  margin-bottom: 8px;
+}
+
+.questionLabel {
+  margin: 18px 0 6px;
+  font-weight: 900;
+  color: #6c4a22;
+  font-size: 0.95rem;
+}
+
+.deepQuestion {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #4a3015;
+  line-height: 1.8;
+  margin: 0;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 10px;
+  border-left: 4px solid #b68c4b;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  color: #8a7a68;
+  font-size: 0.85rem;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd0b8;
+}
+
+/* ===== Desktop layout ===== */
+@media (min-width: 640px) {
+  .choices {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .choice {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 6px;
+    min-height: 72px;
+    padding: 12px 8px;
+  }
+
+  .choice input[type="radio"] {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 720px) {
+  .card { padding: 36px 40px; }
+  .hero { padding: 52px 40px 44px; }
+}
+
+/* ===== Reduced motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  .bar { transition: none; }
+  .btn-primary, .btn-secondary { transition: none; }
+}
